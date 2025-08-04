@@ -2,7 +2,9 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/core";
 import "./App.css";
-
+// import React from "react";
+import Dropdown from "./Dropdown";
+import FilePicker from "./FilePicker";
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
   const [name, setName] = useState("");
@@ -26,6 +28,14 @@ function App() {
         <a href="https://reactjs.org" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
+      </div>
+      <div>
+        <h1>Select an option:</h1>
+        <Dropdown />
+      </div>
+      <div>
+        <h1>File Picker</h1>
+        <FilePicker />
       </div>
       <p>Click on the Tauri, Vite, and React logos to learn more.</p>
 
